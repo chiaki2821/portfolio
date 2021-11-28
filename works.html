@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>"webデザイナー南 千晶のポートフォリオ | Portfolio of web designer Chiaki Minami"</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ここにURLを記述">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="ファビコンの画像のパスを記述">
+    <link rel="canonical" href="https://ここにURLを記述">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Goudy+Bookletter+1911&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/87f2146b3b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+</html>
+
+<body>
+    <header>
+        <div class="header-wrap">
+            <div class="pc-haeder-wrap for-center header-works">
+                <h1 class="logo"><a href="home.html">Chiaki Minami</a></h1>
+                <ul>
+                    <li class="pc-header-list h-l-works"><a href="home.html">top</a></li>
+                    <li class="pc-header-list h-l-works"><a href="about.html">about</a></li>
+                    <li class="pc-header-list h-l-works"><a href="works.html">works</a></li>
+                    <li class="pc-header-list h-l-works"><a href="https://note.com/chiaki_yayo">note</a></li>
+                    <li class="pc-header-list h-l-works"><a href="mailto:chiaki.soga2821@gmail.com">contact</a></li>
+                    <li class="pc-header-list h-l-works"><a href="https://twitter.com/Chiakim18016950"><i
+                                class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="sp-header-wrap">
+                <div class="sp-header-content">
+                    <ul class="sp-header">
+                        <li class="sp-header-list"><a href="home.html">TOP</a></li>
+                        <li class="sp-header-list"><a href="about.html">ABOUT</a></li>
+                        <li class="sp-header-list"><a href="works.html">WORKS</a></li>
+                        <li class="sp-header-list"><a href="https://note.com/chiaki_yayo">NOTE</a></li>
+                        <li class="sp-header-list"><a href="mailto:chiaki.soga2821@gmail.com">CONTACT</a></li>
+                        <li class="sp-header-list"><a href="https://twitter.com/Chiakim18016950"><i
+                                    class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header-upper sp-h-u-works">
+                <div class="nav-open"><span class="bar1"></span><span class="bar2"></span><span class="bar3"></span>
+                </div>
+                <h1 class="logo sp-logo"><a href="home.html">Chiaki Minami</a></h1>
+            </div>
+    </header>
+    <main>
+        <div class="main-works-wrap">
+
+            <div class="works white-box">
+                <h2 class="works-h2">Works</h2>
+                <div class="works-content">
+                    <img src="image/top-works-image.png">
+                    <div class="works-text-wrap">
+                        <div class="works-title">Kazuho Hirano<a href="http://kazuhohirano.com" target="_blank"><img
+                                    class="launch" src="image/launch_black.png"></a></div>
+                        <div class="works-skill">HTML/CSS/WordPress</div>
+                        <p>東京を拠点に活動しているフリーランスPhotographerの平野一穂様のポートフォリオサイトを担当させていただきました。コーディング、WordPressを実装しました。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-wrap footer-works">
+            <div class="share-me">SHERE ME!</div>
+            <div class="footer-list f-l-works">
+                <a
+                    href="https://twitter.com/share?url=https://twitter.com/Chiakim18016950&text=WebデザイナーChiaki Minamiのポートフォリオ">
+                    <p><i class="fab fa-twitter"></i></p>
+                </a>
+                <a href="http://www.facebook.com/share.php?u=http://chiaki.minami.com">
+                    <p><i class="fab fa-facebook-square"></i></p>
+                </a>
+                <a href="https://timeline.line.me/social-plugin/share?url=http://chiaki.minami.com">
+                    <p><i class="fab fa-line"></i></p>
+                </a>
+            </div>
+            <small>© 2021 Chiaki Minami</small>
+            <div class="btn-for-the-top"><button class="for-top for-top-hover-works f-t-works "><i
+                        class="fas fa-angle-double-up"></i></button></div>
+        </div>
+    </footer>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script>
+
+        $(function () {
+            let forTOP = $('.btn-for-the-top');
+            forTOP.click(function () {
+                $('body,html').animate({ scrollTop: 0 }, 500);
+                return false;
+            });
+        });
+    </script>
+    <script>
+        if (window.matchMedia("(min-width:577px)").matches) {
+            // js-glitterクラスがついた要素を全て取得
+            const glitterEls = document.querySelectorAll(".daia-js");
+            // 取得した要素をArrayに変換
+            const glitterElsArr = Array.prototype.slice.call(glitterEls);
+            // 取得した要素ひとつひとつに処理を行う
+            glitterElsArr.forEach((glitterEl) => {
+                let interval;
+                // マウスホバー時にキラキラを生成
+                glitterEl.addEventListener("mouseenter", () => {
+                    interval = setInterval(createStar.bind(undefined, glitterEl), 100);
+                });
+                // マウスを離すと停止
+                glitterEl.addEventListener("mouseleave", () => {
+                });
+            });
+            // キラキラを生成する関数
+            const createStar = (el) => {
+                const starEl = document.createElement("span");
+                starEl.className = "star";
+                starEl.style.left = Math.random() * el.clientWidth + "px";
+                starEl.style.top = Math.random() * el.clientHeight + "px";
+                el.appendChild(starEl);
+                // 一定時間経つとキラキラを消す
+                setTimeout(() => {
+                    starEl.remove();
+                }, 1000);
+            }
+        }
+        else if (window.matchMedia("(max-width:576px)").matches) {
+            //SPの時はhoverしても反応しないようにする
+
+            $(".star").css("display", "none");
+
+        }
+        //ロードとリサイズの両方で同じ処理を付与する
+        window.onload = switchByWidth;
+        window.onresize = switchByWidth;
+    </script>
+    <!--ハンバーガーメニューがバッテンになりメニューが上から降りてくる-->
+    <script type="text/javascript">
+        $('.nav-open').on('click', function () {
+            $('.nav-open').toggleClass('close');
+            $('.sp-header-wrap').fadeToggle(500);
+        });
+    </script>
+
+    <script type="text/javascript">
+        if (window.matchMedia("(max-width:576px)").matches) {
+            /* ウィンドウサイズが 576px以下の場合に有効にしたい処理*/
+            $('.rainbow').hide();
+            setInterval(function () {
+                $(".black").fadeOut(1000);
+                $(".rainbow").fadeIn(1000);
+                $(".black").appendTo(".sp-jquery-b-n-r");
+            }, 2000);
+        }
+    </script>
+</body>

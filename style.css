@@ -1,0 +1,1084 @@
+/*Theme Name: My Portfolio
+ Auther: Chiaki Minami
+ */
+
+@charset "utf-8";
+html {
+    font-size: 62.5%;
+    color: #4d4d4d;
+    /*16px × 62.5%=10px*/
+}
+
+body {
+    font-family: 'Noto Serif JP', Arial, Helvetica, sans-serif;
+    /*overflow: hidden;*/
+    line-height: inherit;
+    color: #4d4d4d;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+a:hover {
+    color: #fff;
+}
+
+h2 {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 3vw;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 0;
+}
+
+/*--------------------------
+ *
+ *PC header
+ *
+-------------------------*/
+
+.pc-haeder-wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    flex-wrap: wrap;
+}
+
+.header-home {
+    background-color: #FBE79F;
+}
+
+.header-wrap ul {
+    display: flex;
+    margin-right: 2%;
+    justify-content: flex-end;
+}
+
+.logo {
+    font-family: 'Dancing Script', 'cursive';
+    font-size: x-large;
+    margin-left: 42px;
+}
+
+.logo-home a {
+    color: #D3B873;
+}
+
+.pc-header-list {
+    margin: 0 10%;
+    font-family: 'Goudy Bookletter 1911', serif;
+    letter-spacing: 1px;
+    width: 20%;
+}
+
+.pc-header-list a {
+    color: #D3B873;
+    font-size: 1vw;
+}
+
+.for-center {
+    align-items: center;
+}
+
+.sp-header-wrap {
+    display: none;
+}
+
+.header-upper {
+    display: none;
+}
+
+/*--------------------------
+ *
+ *スマホ header
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    body {
+        /*overflow: hidden;*/
+    }
+    .pc-haeder-wrap {
+        display: none;
+    }
+    .sp-header-wrap {
+        display: block;
+    }
+    .sp-header-wrap {
+        width: 100%;
+        height: 100%;
+        background-image: url(image/sp-navigation-background.jpg);
+        background-size: 270%;
+        z-index: 2;
+        position: fixed;
+        left: 0;
+        display: none;
+        transition: .2s;
+    }
+    .header-upper {
+        display: flex;
+        width: 100%;
+        padding: 4% 0;
+    }
+    /*他のページとの色を分けるため独自のクラスをつける*/
+    .sp-h-u-home {
+        background-color: #FBE79F;
+    }
+    .sp-logo {
+        font-size: 6.5vw;
+        margin: 0 auto;
+    }
+    .header-wrap ul {
+        display: block;
+        text-align: center;
+        margin: 45% 0;
+    }
+    .sp-header-list {
+        margin-bottom: 7%;
+        font-family: 'Goudy Bookletter 1911', serif;
+        letter-spacing: 3px;
+        font-size: 5vw;
+    }
+    .sp-header-list a {
+        color: #000;
+    }
+    /*アイコンのスペース*/
+    .nav-open {
+        display: block;
+        width: 30px;
+        height: 22px;
+        position: relative;
+        z-index: 3;
+        left: 10%;
+    }
+    /*ハンバーガーの形をCSSで表現*/
+    .nav-open span {
+        position: absolute;
+        height: 2px;
+        width: 25px;
+        border-radius: 3px;
+        background: #fff;
+        display: block;
+        content: '';
+        cursor: pointer;
+        transition: all 0.5s ease;
+    }
+    .nav-open span.bar1 {
+        top: 5px;
+    }
+    .nav-open span.bar2 {
+        top: 15px;
+    }
+    .nav-open span.bar3 {
+        top: 25px;
+    }
+    .nav-open.close .bar1 {
+        transform: translate(-50%, 12px) rotate(45deg);
+        transition: transform .3s;
+    }
+    .nav-open.close .bar2 {
+        opacity: 0;
+        transition: opacity .3s;
+    }
+    .nav-open.close .bar3 {
+        transform: translate(-50%, -8px) rotate(-45deg);
+        transition: transform .3s;
+    }
+}
+
+/*--------------------------
+ *
+ *PC home-top
+ *
+-------------------------*/
+
+.white-box {
+    width: 90%;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 0 10%;
+}
+
+.main-wrap {
+    background-image: url(image/home-main-background.jpg);
+    background-size: cover;
+}
+
+.main-img {
+    margin-top: 10%;
+    width: 50%;
+}
+
+.main-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*なぜか大きさが揃わないため二つのクラスに分けてwidthを指定*/
+
+.top-text-img {
+    max-width: 10%;
+}
+
+.top-text-img-2 {
+    max-width: 5%;
+}
+
+.top-text-wrap {
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 45%;
+}
+
+.top-text {
+    font-size: 1vw;
+    font-family: 'Goudy Bookletter 1911', serif;
+    margin: 1.5vw 0;
+    letter-spacing: 2px;
+}
+
+.mgn-auto {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+/*--------------------------
+ *
+ *スマホ home-top
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    .mgn-auto {
+        display: block;
+        position: inherit;
+    }
+    .main-img {
+        width: 90%;
+        position: relative;
+        /*padding-top: 40%;*/
+        margin: 0 auto;
+    }
+    .top-text-wrap {
+        text-align: center;
+        position: inherit;
+        top: 0%;
+        /*12*/
+        left: 0%;
+        /*42*/
+        padding: 10% 0 5% 0;
+    }
+    .white-box {
+        padding: 0 2%;
+    }
+    .sp-jquery {
+        position: relative;
+        height: 77vh;
+    }
+    .main-img-jquery {
+        position: absolute;
+    }
+    /*なぜか大きさが揃わないため二つのクラスに分けてwidthを指定*/
+    .top-text-img {
+        max-width: 2.5%;
+    }
+    .top-text-img-2 {
+        max-width: 1.5%;
+    }
+    .rainbow {
+        visibility: visible;
+    }
+    .black:active .rainbow {
+        visibility: visible;
+    }
+    .rainbow:active .black {
+        visibility: hidden;
+    }
+}
+
+/*--------------------------
+ *
+ *PC home-about
+ *
+-------------------------*/
+
+.about {
+    padding: 50px 0;
+}
+
+.about-text {
+    text-align: center;
+    padding: 20%;
+}
+
+.about-skelton {
+    background-color: rgba(251, 231, 159, 0.5);
+}
+
+.text {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20% 0;
+    line-height: 2;
+}
+
+.about-box {
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/*--------------------------
+ about ボタン装飾
+-------------------------*/
+
+.more-btn {
+    display: inline-block;
+    background: #544454;
+    width: 150px;
+    padding: 15px 30px 15px 20px;
+    text-align: center;
+    margin: 10%;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: large;
+    letter-spacing: 1px;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.more-btn:hover {
+    display: inline-block;
+    background: #fff;
+    width: 150px;
+    padding: 15px 30px 15px 20px;
+    text-align: center;
+    margin: 10%;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #544454
+}
+
+.more-btn::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 25px;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-135deg);
+}
+
+.more-btn::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid;
+    border-color: transparent transparent #544454 #544454;
+    transform: rotate(-135deg);
+    transition: .5s;
+}
+
+.more-btn:hover::after {
+    right: 10px;
+}
+
+/*--------------------------
+ *
+ *スマホ home-about
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    .about-box {
+        width: 100%;
+    }
+    h2 {
+        font-size: 5vw;
+    }
+    .about {
+        padding: 0;
+    }
+    .text {
+        width: 100%;
+    }
+}
+
+/*--------------------------
+ *
+ *PC home-works
+ *
+-------------------------*/
+
+.works-wrap {
+    display: flex;
+    padding: 10% 0;
+    justify-content: space-between;
+}
+
+.main-img-works {
+    max-width: 100%;
+}
+
+.texttext {
+    width: 45%;
+    padding: 10% 0;
+    line-height: 2;
+}
+
+.more-skelton {
+    position: relative;
+}
+
+.mask:hover {
+    opacity: 1;
+}
+
+.more-btn-hover {
+    width: 100%;
+}
+
+.mask {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+}
+
+/*--------------------------
+ *
+ *スマホ home-works
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    .works-wrap {
+        display: block;
+    }
+    .works-text {
+        text-align: center;
+    }
+    .texttext {
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+/*--------------------------
+ *
+ *PC home-note
+ *
+-------------------------*/
+
+.note-wrap {
+    padding: 2% 0;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /*.note-textにかかっている部分*/
+}
+
+.note-click {
+    max-width: 5%;
+    position: absolute;
+    top: 70%;
+    left: 52%;
+}
+
+.circle {
+    width: 10%;
+    margin: 0 auto;
+}
+
+.circle-in {
+    width: 100%;
+    padding-top: 30%;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.circle-in:hover {
+    background-color: rgba(0, 0, 0, 0.0);
+}
+
+.circle:hover img {
+    display: none;
+}
+
+.note-h2 {
+    color: #544454;
+    padding-bottom: 30%;
+}
+
+.note-text {
+    animation: text-from-right 40s linear infinite;
+    transform: translateX(100%);
+    letter-spacing: 2px;
+    font-size: 1vw;
+    color: #fff;
+    margin: 3% 0;
+}
+
+.note-text-revers {
+    animation: text-from-left 30s linear infinite;
+    transform: translateX(0%);
+    letter-spacing: 2px;
+    font-size: 1vw;
+    color: #fff;
+    margin: 3% 0;
+}
+
+@keyframes text-from-right {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes text-from-left {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/*--------------------------
+ *
+ *スマホ home-note
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    .note-h2 {
+        padding-bottom: 25%;
+    }
+    .circle {
+        width: 15%;
+    }
+    .circle-in {
+        padding-top: 25%;
+    }
+}
+
+/*--------------------------
+ *
+ *PC home-contact
+ *
+-------------------------*/
+
+.contact-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin: 0 auto;
+    padding: 10% 0;
+}
+
+.daia {
+    width: 6vw;
+    height: 6vw;
+    background-color: #544454;
+    transform: rotate(45deg);
+    position: relative;
+    box-shadow: 3px 0px 3px 1px rgba(0, 0, 0, .4)
+}
+
+.daia-text {
+    font-size: 1vw;
+    text-align: center;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 44%;
+    left: 20%;
+    font-family: 'Goudy Bookletter 1911', serif;
+    letter-spacing: 2px;
+}
+
+.mail {
+    padding-left: 10%;
+}
+
+.DM {
+    padding-left: 5%;
+}
+
+.contact-for-background {
+    position: relative;
+}
+
+.contact-h2 {
+    font-family: 'Dancing Script';
+    font-size: 20vw;
+    color: #fff;
+    transform: rotate(-10deg);
+    position: absolute;
+    bottom: 5%;
+    left: 20%;
+}
+
+.contact-wrap a:hover {
+    color: #fff;
+}
+
+.daia-js {
+    position: relative;
+    display: block;
+}
+
+/* キラキラ部分 */
+
+.star {
+    position: absolute;
+    display: block;
+    width: 10px;
+    /* キラキラの横幅を指定 */
+    height: 10px;
+    /* キラキラの縦幅を指定 */
+    background-image: url("image/star-yellow.svg");
+    /* キラキラの画像のパスを記入 */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    animation: glitter 1s;
+    pointer-events: none;
+}
+
+/* キラキラが発生するアニメーション */
+
+@keyframes glitter {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/*--------------------------
+ *
+ *スマホ home-works
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    .contact-wrap {
+        width: 30%;
+    }
+    .daia {
+        width: 8vw;
+        height: 8vw;
+    }
+    .daia-text {
+        font-size: 2vw;
+        top: 30%;
+        left: 13%;
+        letter-spacing: 1px;
+    }
+}
+
+/*--------------------------
+ *
+ *PC home-footer
+ *
+-------------------------*/
+
+.footer-wrap {
+    text-align: center;
+    padding: 2% 0;
+    position: relative;
+}
+
+.footer-home {
+    color: #D3B873;
+    background-color: #FBE79F;
+}
+
+.share-me {
+    font-size: 1.5vw;
+    font-family: 'Goudy Bookletter 1911', serif;
+    letter-spacing: 2px;
+}
+
+.footer-list {
+    display: flex;
+    width: 10%;
+    margin: 0 auto;
+    padding: 2% 0%;
+}
+
+.f-l-home i {
+    color: #D3B873;
+}
+
+.f-l-home i:hover {
+    color: #544454;
+}
+
+.footer-list p {
+    font-size: 1.5vw;
+    padding-right: 2.5vw;
+}
+
+footer small {
+    font-size: 1vw;
+    letter-spacing: 1px;
+}
+
+.btn-for-the-top {
+    width: 3%;
+    position: absolute;
+    right: 3%;
+    bottom: 35%;
+}
+
+.btn-for-the-top i {
+    padding: 20% 20%;
+    font-size: 1.5vw;
+}
+
+.for-top {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.f-t-home {
+    border: solid 3px #D3B873;
+}
+
+.btn-for-the-top:hover .for-top-hover-home {
+    width: 100%;
+    border-radius: 50%;
+    background-color: #D3B873;
+    border: solid 3px #D3B873;
+}
+
+.btn-for-the-top:hover .f-t-home i {
+    color: #FBE79F;
+}
+
+@media screen and (max-width:576px) {
+    .share-me {
+        font-size: 2vw;
+    }
+    .footer-list {
+        width: 20%;
+    }
+    .footer-list p {
+        font-size: 4vw;
+        padding-right: 3.5vw;
+    }
+    footer small {
+        font-size: 2vw;
+    }
+    .btn-for-the-top {
+        right: 12%;
+        bottom: 20%;
+        width: 10%;
+    }
+    .for-top {
+        border: solid px;
+    }
+    .btn-for-the-top i {
+        padding: 35% 10%;
+        font-size: inherit;
+    }
+}
+
+/*--------------------------
+ *
+ *PC about page
+ *
+-------------------------*/
+
+/*header*/
+
+.header-about {
+    background-color: #D3B1EE;
+}
+
+.h-l-about a {
+    color: #fff;
+}
+
+/*main*/
+
+.about-h2 {
+    font-size: 2vw;
+    letter-spacing: 2px;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.about-upper hr {
+    width: 140%;
+}
+
+.about-upper p {
+    margin: 3% 0;
+    letter-spacing: 1px;
+}
+
+.about-upper i {
+    margin-right: 2%;
+    color: #4d4d4d;
+}
+
+.about-upper img {
+    max-width: 70%;
+    margin-top: 10%;
+}
+
+.upper-wrap {
+    padding-top: 30%;
+}
+
+.about-upper {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.history, .history-2 {
+    letter-spacing: 0.5px;
+    font-size: 0.7vw;
+    font-family: Noto Serif JP, serif;
+}
+
+.history td {
+    padding: 2px 5px;
+}
+
+/*footer*/
+
+.footer-about {
+    background-color: #D3B1EE;
+    color: #fff;
+}
+
+.f-l-about {
+    color: #fff;
+}
+
+.f-t-about {
+    border: #fff solid 2px;
+}
+
+.btn-for-the-top:hover .for-top-hover-about {
+    width: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: solid 2px #fff;
+}
+
+.btn-for-the-top:hover .f-t-about i {
+    color: #D3B1EE;
+}
+
+/*--------------------------
+ *
+ *スマホ about
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    /*header*/
+    .sp-h-u-about {
+        background-color: #D3B1EE;
+    }
+    /*main*/
+    .about-upper {
+        display: block;
+    }
+    .about-upper img {
+        max-width: 100%;
+        margin-top: 5%;
+    }
+    .about-upper p {
+        margin: 1% 0;
+    }
+    .about-upper hr {
+        width: 100%;
+    }
+    .about-wrap i {
+        margin-right: 2%;
+        color: #4d4d4d;
+    }
+    .upper-wrap {
+        padding-top: 15%;
+    }
+    .about-h2 {
+        font-size: 5vw;
+        margin: 2% 0;
+    }
+    .sp-a-h2 {
+        text-align: center;
+    }
+    .history, .history-2 {
+        font-size: 2.5vw;
+    }
+    .history {
+        width: 90%;
+        margin: 0 auto;
+    }
+    /*hooter*/
+}
+
+/*--------------------------
+ *
+ *PC works page
+ *
+-------------------------*/
+
+/*header*/
+
+.header-works {
+    background-color: #201B3D;
+}
+
+.h-l-works a {
+    color: #fff;
+}
+
+/*footer*/
+
+.footer-works {
+    background-color: #201B3D;
+    color: #fff;
+}
+
+.f-l-works {
+    color: #fff;
+}
+
+.f-t-works {
+    border: #fff solid 2px;
+}
+
+.btn-for-the-top:hover .for-top-hover-works {
+    width: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    border: solid 2px #fff;
+}
+
+.btn-for-the-top:hover .f-t-works i {
+    color: #201B3D;
+}
+
+/*main*/
+
+.about-wrap {
+    background-image: url(image/about-background.png);
+    background-size: cover;
+}
+
+.works {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.works img {
+    max-width: 70%;
+}
+
+.main-works-wrap {
+    background-image: url(image/works-background.jpeg);
+    background-repeat: repeat;
+    padding: 5% 0;
+}
+
+.works-h2 {
+    text-align: center;
+    padding: 3% 0%;
+}
+
+.works-content {
+    text-align: center;
+}
+
+.works-text-wrap {
+    padding: 3% 0;
+    text-align: left;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.works-text-wrap p {
+    letter-spacing: 0.5px;
+    font-size: 0.6vw;
+}
+
+.works-title {
+    font-size: 1.5vw;
+    letter-spacing: 1px;
+    font-family: 'Goudy Bookletter 1911', serif;
+}
+
+.works-skill {
+    font-size: 0.7vw;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.launch {
+    width: 2%;
+    margin-left: 3%;
+}
+
+/*--------------------------
+ *
+ *スマホ about
+ *
+-------------------------*/
+
+@media screen and (max-width:576px) {
+    .sp-h-u-works {
+        background-color: #201B3D;
+    }
+    .works img {
+        max-width: 100%;
+    }
+    .works-text-wrap {
+        width: 90%;
+    }
+    .works-text-wrap p {
+        font-size: 1.4vw;
+    }
+    .works-title {
+        font-size: 4vw;
+    }
+    .works-skill {
+        font-size: 1.5vw;
+        margin: 5px 0;
+    }
+    .launch {
+        width: 4%;
+    }
+}
